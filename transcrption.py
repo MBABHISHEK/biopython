@@ -1,14 +1,20 @@
 import Bio
 from Bio.Seq import Seq
 coding_dna = Seq("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
+template_dna1= coding_dna.complement()
+print('THE  DOUBLE STAND DNA IS :')
 print(coding_dna)
+print(template_dna1)
 template_dna = coding_dna.reverse_complement()
-print(template_dna)
+#print(template_dna)
 messenger_rna = coding_dna.transcribe()
-print(template_dna)
-#to get dna from rna 
-messenger_rna = Seq("AUGGCCAUUGUAAUGGGCCGCUGAAAGGGUGCCCGAUAG")
+print("THE CONVERTED RNA FROM THE ABOVE DNA ")
 print(messenger_rna)
-print('converting this rna to dna ')
+#to get dna from rna 
+print("CONVERTING RNA TO DNA")
+messenger_rna = Seq("AUGGCCAUUGUAAUGGGCCGCUGAAAGGGUGCCCGAUAG")
+print("THE RNA IS :")
+print(messenger_rna)
+print('THE DNA OBTAINED FROM THE ABOVE RNA IS:')
 dna=messenger_rna.back_transcribe()
 print(dna)
